@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/stratospheric
+    username: stratospheric
+    password: stratospheric
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            clientId: spring-boot-application
+            clientSecret: 27b07baf-53ba-42c6-b11f-6384769cada3
+            scope: openid
+        provider:
+          cognito:
+            issuerUri: http://localhost:8888/auth/realms/stratospheric
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 0
+  jpa:
+    show-sql: true
+
+
+management:
+  metrics:
+    export:
+      cloudwatch:
+        enabled: false
+
+custom:
+  web-socket-relay-endpoint: localhost:61613
+  web-socket-relay-username: admin
+  web-socket-relay-password: admin
+  web-socket-relay-use-ssl: false
+  auto-confirm-collaborations: true
+  provide-test-todo-controller: true
+  use-cognito-as-identity-provider: false
+  provide-dynamodb-via-aws: false
+  environment: local
+
+cloud:
+  aws:
+    rds:
+      enabled: false
+    sqs:
+      endpoint: http://localhost:4566
+      region: eu-central-1
+    mail:
+      endpoint: http://localhost:4566
+      region: eu-central-1
+    credentials:
+      secret-key: foo
+      access-key: bar

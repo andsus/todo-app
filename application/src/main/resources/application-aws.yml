@@ -1,0 +1,29 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            clientId: ${COGNITO_CLIENT_ID}
+            clientSecret: ${COGNITO_CLIENT_SECRET}
+            scope: openid, profile, email
+            clientName: stratospheric-users-client
+        provider:
+          cognito:
+            issuerUri: ${COGNITO_PROVIDER_URL}
+
+management:
+  metrics:
+    export:
+      cloudwatch:
+        enabled: false # disabled to save some $$$ on our monthly AWS bill
+
+custom:
+  sharing-queue: ${TODO_SHARING_QUEUE_NAME}
+  web-socket-relay-endpoint: ${WEB_SOCKET_RELAY_ENDPOINT}
+  web-socket-relay-username: ${WEB_SOCKET_RELAY_USERNAME}
+  web-socket-relay-password: ${WEB_SOCKET_RELAY_PASSWORD}
+  web-socket-relay-use-ssl: true
+  provide-test-todo-controller: false
+  use-cognito-as-identity-provider: true
+  provide-dynamodb-via-aws: true

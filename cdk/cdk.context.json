@@ -1,0 +1,22 @@
+{
+  "availability-zones:account=494365134671:region=ap-southeast-2": [
+    "ap-southeast-2a",
+    "ap-southeast-2b",
+    "ap-southeast-2c"
+  ],
+  "availability-zones:account=221875718260:region=eu-central-1": [
+    "eu-central-1a",
+    "eu-central-1b",
+    "eu-central-1c"
+  ],
+  "availability-zones:account=116416114016:region=us-west-2": [
+    "us-west-2a",
+    "us-west-2b",
+    "us-west-2c",
+    "us-west-2d"
+  ],
+  "hosted-zone:account=116416114016:domainName=devops.prime-video.amazon.dev:region=us-west-2": {
+    "Id": "/hostedzone/Z03372241WUR0BD8HC6OF",
+    "Name": "devops.prime-video.amazon.dev."
+  }
+}

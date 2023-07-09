@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>dev.stratospheric.todoapp</groupId>
+  <artifactId>cdk-chapter-6</artifactId>
+  <version>0.1</version>
+  <description>CDK App for Chapter 6</description>
+
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>5.8.2</junit.version>
+    <passay.version>1.6.3</passay.version>
+    <cdk-constructs.version>0.1.13</cdk-constructs.version>
+    <log4j2.version>2.18.0</log4j2.version>
+    <cdk.version>1.182.0</cdk.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.9.0</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>dev.stratospheric</groupId>
+      <artifactId>cdk-constructs</artifactId>
+      <version>${cdk-constructs.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+<!--
+    <dependency>
+      <groupId>software.amazon.awscdk</groupId>
+      <artifactId>route53</artifactId>
+      <version>${cdk.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>software.amazon.awscdk</groupId>
+      <artifactId>certificatemanager</artifactId>
+      <version>${cdk.version}</version>
+    </dependency>
+-->
+    <dependency>
+      <groupId>org.passay</groupId>
+      <artifactId>passay</artifactId>
+      <version>${passay.version}</version>
+    </dependency>
+  </dependencies>
+</project>

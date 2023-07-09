@@ -1,0 +1,253 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "NetworkStack" {
+    subgraph "cluster-SubGraph.NetworkStack" {
+      graph [
+        label = "NetworkStack",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#e4e4e4",
+      ];
+      subgraph "cluster-SubGraph.Network" {
+        graph [
+          label = "Network",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "NetworkStack/Network/vpc" [
+          label = " vpc",
+          fontsize = 12,
+          image = "/Users/susantin/.nvm/versions/node/v14.20.0/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-Virtual-Private-Cloud_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "NetworkStack/Network/cluster" [
+          label = " cluster",
+          fontsize = 12,
+          image = "/Users/susantin/.nvm/versions/node/v14.20.0/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_Amazon-Elastic-Container-Service_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "NetworkStack/Network/loadbalancerSecurityGroup" [
+          label = "\nloadbalancerSecurityG",
+          fontsize = 12,
+          image = "/Users/susantin/.nvm/versions/node/v14.20.0/lib/node_modules/cdk-dia/icons/aws/security_group.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "NetworkStack/Network/ingressToLoadbalancer" [
+          label = " EC2\nSecurityGroupIngress\ningressToLoadbalancer",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/loadbalancer" [
+          label = " loadbalancer",
+          fontsize = 12,
+          image = "/Users/susantin/.nvm/versions/node/v14.20.0/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Elastic-Load-Balancing_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "NetworkStack/Network/defaultTargetGroup" [
+          label = " defaultTargetGroup",
+          fontsize = 12,
+          image = "/Users/susantin/.nvm/versions/node/v14.20.0/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Elastic-Load-Balancing_Application-Load-Balancer_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "NetworkStack/Network/HttpListenerRule" [
+          label = " HttpListenerRule",
+          fontsize = 12,
+          image = "/Users/susantin/.nvm/versions/node/v14.20.0/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Elastic-Load-Balancing_Application-Load-Balancer_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "NetworkStack/Network/vpcId" [
+          label = " vpcId",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/httpListener" [
+          label = " httpListener",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/httpsListener" [
+          label = " httpsListener",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/loadBalancerSecurityGroupId" [
+          label = "\nloadBalancerSecurityG",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/ecsClusterName" [
+          label = " ecsClusterName",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/availabilityZoneOne" [
+          label = " availabilityZoneOne",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/availabilityZoneTwo" [
+          label = " availabilityZoneTwo",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/isolatedSubnetOne" [
+          label = " isolatedSubnetOne",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/isolatedSubnetTwo" [
+          label = " isolatedSubnetTwo",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/publicSubnetOne" [
+          label = " publicSubnetOne",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/publicSubnetTwo" [
+          label = " publicSubnetTwo",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/loadBalancerArn" [
+          label = " loadBalancerArn",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/loadBalancerDnsName" [
+          label = " loadBalancerDnsName",
+          fontsize = 12,
+        ];
+        "NetworkStack/Network/loadBalancerCanonicalHostedZoneId" [
+          label = "\nloadBalancerCanonical",
+          fontsize = 12,
+        ];
+      }
+    }
+  }
+  "NetworkStack/Network/loadbalancerSecurityGroup" -> "NetworkStack/Network/vpc" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/ingressToLoadbalancer" -> "NetworkStack/Network/loadbalancerSecurityGroup" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/loadbalancer" -> "NetworkStack/Network/vpc" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/loadbalancer" -> "NetworkStack/Network/loadbalancerSecurityGroup" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/loadbalancer" -> "NetworkStack/Network/defaultTargetGroup" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/defaultTargetGroup" -> "NetworkStack/Network/vpc" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/HttpListenerRule" -> "NetworkStack/Network/loadbalancer" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/vpcId" -> "NetworkStack/Network/vpc" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/httpListener" -> "NetworkStack/Network/loadbalancer" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/httpsListener" -> "NetworkStack/Network/loadbalancer" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/loadBalancerSecurityGroupId" -> "NetworkStack/Network/loadbalancerSecurityGroup" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/ecsClusterName" -> "NetworkStack/Network/cluster" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/isolatedSubnetOne" -> "NetworkStack/Network/vpc" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/isolatedSubnetTwo" -> "NetworkStack/Network/vpc" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/publicSubnetOne" -> "NetworkStack/Network/vpc" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/publicSubnetTwo" -> "NetworkStack/Network/vpc" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/loadBalancerArn" -> "NetworkStack/Network/loadbalancer" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/loadBalancerDnsName" -> "NetworkStack/Network/loadbalancer" [
+    dir = "both",
+  ];
+  "NetworkStack/Network/loadBalancerCanonicalHostedZoneId" -> "NetworkStack/Network/loadbalancer" [
+    dir = "both",
+  ];
+}

@@ -1,0 +1,25 @@
+{
+  "context": {
+    "applicationName": "todo-app",
+    "region": "us-west-2",
+    "accountId": "116416114016",
+    "springProfile": "aws",
+    "environmentName": "staging",
+    "dockerRepositoryName": "todo-app",
+    "dockerImageTag": "latest",
+    "dockerImageUrl": "116416114016.dkr.ecr.us-west-2.amazonaws.com/todo-app:latest",
+    "hostedZoneDomain": "devops.prime-video.amazon.dev",
+    "applicationDomain": "app.devops.prime-video.amazon.dev",
+    "applicationUrl": "https://app.devops.prime-video.amazon.dev",
+    "loginPageDomainPrefix": "staging-stratospheric",
+    "sslCertificateArn": "arn:aws:acm:us-west-2:116416114016:certificate/611d58bb-cd61-475d-8f52-72cc7c7a5945",
+
+    "activeMqUsername": "activemqUser",
+    "canaryUsername": "canary",
+    "canaryUserPassword": "SECRET_OVERRIDDEN_BY_WORKFLOW",
+    "confirmationEmail": "noreply@devops-prime-video-amazon-dev.awsapps.com",
+
+    "githubToken": "SECRET_OVERRIDDEN_BY_WORKFLOW"
+
+  }
+}
